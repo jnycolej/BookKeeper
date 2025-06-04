@@ -1,18 +1,29 @@
 version: '3.8'
 
 services:
+  mongo:
+    image: mongo:latest
+    container_name: local-mongod
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - booknetwork
+
   backend:
     build: ./backend
-    ports:
-      - "5000:5000"
+    container_name: bookkeeper-backend
+    depends_on:
+      - mongo
     environment:
-      - MONGO_URI=mongodb://mongodb:27017/library
+      - MONGO_URI=mongodb://mongo:27017/library    
     volumes:
       - ./backend:/usr/src/app  # Bind-mount backend code for live updates
-      - /usr/src/app/node_modules  # Prevents overwriting node_modules
+      - /usr/src/app/node_modules  # Prevents overwriting node_modules    
+    ports:
+      - "5000:5000"
     command: npm run dev  # Run backend in development mode with nodemon
-    depends_on:
-      - mongo  # Should be "mongo", not "mongodb"
     networks:
       - booknetwork
 
@@ -33,19 +44,8 @@ services:
     networks:
       - booknetwork
 
-
-  mongo:  # Changed from "mongodb" to "mongo" to match the backend connection string
-    image: mongo
-    ports:
-      - "27018:27017"
-    volumes:
-      - mongodb_data:/data/db
-    networks:
-      - booknetwork
-
 volumes:
-  mongodb_data:
+  mongo-data:
 
 networks:
-  booknetwork:
-    external: true
+  booknetwork: {}
