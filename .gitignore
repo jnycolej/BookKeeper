@@ -2,3 +2,12 @@ node_modules/
 .DS_Store
 mongodb_backup/
 data/
+dist/
+build/
+logs/
+*.log
+.vscode/
+.dockerignore
+.env
+.gitignore
+books.json
