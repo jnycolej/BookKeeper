@@ -17,7 +17,7 @@ services:
     depends_on:
       - mongo
     environment:
-      - MONGO_URI=mongodb://mongo:27017/library 
+      # - MONGO_URI=mongodb://mongo:27017/library 
       - REACT_APP_API_HOST=backend:5000   
     volumes:
       - ./backend:/usr/src/app  # Bind-mount backend code for live updates
