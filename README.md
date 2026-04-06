@@ -29,17 +29,20 @@ Link to project: Coming Soon
 
 ## Screenshots
 
-<p align="center">
-    <img src="./assets/homepage.png" width:"45%" />
-</p>
-<p align="center">
-    <img src="./assets/librarybooks.png" width:"45%" />
-    <img src="./assets/librarymovies.png" width:"45%" />
-</p>
-<p align="center">
-    <img src="./assets/search.png" width:"45%" />
-    <img src="./assets/bookdetails.png" width:"45%" />
-</p>
-<p align="center">
-    <img src="./assets/bookform.png" width:"45%" />
-</p>
+### Home Screen
+![Home](./assets/homepage.png)
+
+### Library Page - Books
+![Books Library](./assets/librarybooks.png)
+
+### Library Page - Movies
+![Movies Library](./assets/librarymovies.png)
+
+### Search
+![Search](./assets/search.png)
+
+### Details Page
+![Book Details](./assets/bookdetails.png)
+
+### Book Form
+![Book Form](./assets/bookform.png)
