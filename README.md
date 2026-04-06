@@ -1,37 +1,45 @@
-BookKeeper
+# BookKeeper
 
-BookKeeper is a personal library tracking application that allows users to catalog, organize, and track their reading history across physical books, ebooks, and borrowed titles. It is a modern alternatice ot traditional book tracking tools, with an emphasis on clean UI, flexible metadata, and future adaptability.
+Full-stack personal media tracking application that allows users to catalog, organize, and analyze books, movies, TV shows, and games in one unified system.
 
 Link to project: Coming Soon
 
-How It's Made:
+## Key Features
+ - Track books, movies, TV shows, and video games in one platform
+ - Advanced filtering and sorting by genre, status, and metadata
+ - User authentication with private, secure libraries (Auth0)
+ - Detailed media records including ratings, formats, and reading history
+ - Dynamic status tracking (read, currently reading, want to consume, etc.)
+ - Scalable data model supporting flexible media attributes
 
-Tech used: HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, Auth0, Docker, Vite, Tailwind CSS
+## Technical Highlights
+ - Designed RESTful API using Node.js and Express for scalable data operations
+ - Implemented flexible MongoDB schema to support multiple media types
+ - Integrated Auth0 for secure authentication and protected routes
+ - Built reusable React components for maintainable UI architecture
+ - Optimized filtering and sorting logic for large datasets
+ - Containerized application using Docker for consistent environments
 
-BookKeeper was designed as a full-stack application from the beginning, with clear separation between the frontend, backend, and data layers. The frontend is built with React and focuses on reusable components, predictable state management, and a clean user experience. Routing and protected views ensure users can securely manage their personal libraries.
+## Tech Stack
+ - Frontend: React, Vite, Tailwind CSS
+ - Backend: Node.js, Express
+ - Database: MongoDB
+ - Auth: Auth0
+ - DevOps: Docker
 
-The backend is powered by Node.js and Express, providing RESTful API endpoints for managing books, genres, reading status, and metadata. MongoDB was chosen for its flexible document structure, allowing books to store varied information such as formats, series data, ratings, ISBN/ASIN identifiers, and reading dates without rigid schema constraints.
+## Screenshots
 
-Authentication and authorization are handled through Auth0, ensuring that each user’s library is private and securely accessed. Docker is used to containerize both the frontend and backend, enabling consistent development environments and simplifying deployment.
-
-Throughout development, features were built incrementally, tested locally, and refactored as the application grew in complexity.
-
-Optimizations
-
-As BookKeeper evolved, several optimizations were made to improve performance and maintainability:
-
-- Refactored API routes to reduce redundant database queries
-- Centralized API logic into service layers for cleaner frontend code
-- Improved filtering and sorting logic to handle larger book collections efficiently
-- Reduced unnecessary component re-renders by tightening state scope
-- Containerized the application with Docker to eliminate environment inconsistencies
-
-These changes resulted in a more scalable codebase and a smoother user experience as the library grows.
-
-Lessons Learned:
-
-Building BookKeeper reinforced the importance of thinking beyond MVP features and considering how real users interact with long-lived data. I gained hands-on experience designing APIs, structuring a growing React application, and managing authentication in a real-world scenario.
-
-This project also taught me how valuable refactoring is as a skill — not just to clean up code, but to improve performance, readability, and future extensibility.
-
-BookKeeper represents a significant step forward in my ability to design, build, and maintain full-stack applications independently.
+<p align="center">
+    <img src="./assets/homepage.png" width:"45%" />
+</p>
+<p align="center">
+    <img src="./assets/librarybooks.png" width:"45%" />
+    <img src="./assets/librarymovies.png" width:"45%" />
+</p>
+<p align="center">
+    <img src="./assets/search.png" width:"45%" />
+    <img src="./assets/bookdetails.png" width:"45%" />
+</p>
+<p align="center">
+    <img src="./assets/bookform.png" width:"45%" />
+</p>
