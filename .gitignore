@@ -13,3 +13,4 @@ logs/
 books.json
 backend/.env
 frontend/.env
+frontend/.pnpm-store
